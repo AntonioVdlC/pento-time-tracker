@@ -1,0 +1,32 @@
+{
+  "name": "pento-time-tracker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "precommit": "lint-staged",
+    "start": "concurrently \"npm run start:server\"  \"npm run start:client\"",
+    "start:server": "cd server && npm start",
+    "start:client": "cd client && npm start",
+    "postinstall": "concurrently \"npm run install:server \" \"npm run install:client \"",
+    "install:server": "cd server && npm install --only=dev && npm install",
+    "install:client": "cd client && npm install --only=dev && npm install",
+    "test": "concurrently \"npm run test:server \" \"npm run test:client \"",
+    "test:server": "cd server && npm test",
+    "test:client": "cd client && npm test",
+    "heroku-postbuild": "cd client && npm run build",
+    "heroku-start": "NODE_ENV=production forever server/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^3.5.1",
+    "forever": "^0.15.3"
+  },
+  "devDependencies": {
+    "husky": "^0.14.3",
+    "lint-staged": "^5.0.0",
+    "prettier": "^1.8.2"
+  }
+}

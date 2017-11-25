@@ -1,0 +1,10 @@
+{
+  "client/src/**/*.{js,jsx,json,css}": [
+    "prettier --single-quote --write",
+    "git add"
+  ],
+  "server/**/*.{js,jsx,json,css}": [
+    "prettier --single-quote --write",
+    "git add"
+  ]
+}

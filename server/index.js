@@ -1,5 +1,5 @@
-const express = require('express')
-const app = express()
+const express = require('express');
+const app = express();
 
 // Serve static files only in production
 if (process.env.NODE_ENV === 'production') {

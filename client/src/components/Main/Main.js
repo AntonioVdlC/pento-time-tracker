@@ -1,11 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-import './Main.css'
+import './Main.css';
 
-const Main = ({ children }) => (
-  <main className="main">
-    {children}
-  </main>
-)
+const Main = ({ children }) => <main className="main">{children}</main>;
 
-export default Main
+export default Main;

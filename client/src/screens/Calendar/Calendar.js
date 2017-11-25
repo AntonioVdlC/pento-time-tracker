@@ -1,14 +1,12 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
-import './Calendar.css'
+import './Calendar.css';
 
 class Calendar extends Component {
-  state = {}
+  state = {};
   render = () => {
-    return (<div className="calendar">
-      Calendar
-    </div>)
-  }
+    return <div className="calendar">Calendar</div>;
+  };
 }
 
-export default Calendar
+export default Calendar;

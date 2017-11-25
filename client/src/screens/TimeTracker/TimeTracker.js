@@ -1,14 +1,12 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
-import './TimeTracker.css'
+import './TimeTracker.css';
 
 class TimeTracker extends Component {
-  state = {}
+  state = {};
   render = () => {
-    return (<div className="time-tracker">
-      Time Tracker
-    </div>)
-  }
+    return <div className="time-tracker">Time Tracker</div>;
+  };
 }
 
-export default TimeTracker
+export default TimeTracker;

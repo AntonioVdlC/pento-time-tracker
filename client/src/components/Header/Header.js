@@ -1,11 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-import './Header.css'
+import './Header.css';
 
-const Header = ({ children }) => (
-  <header className="header">
-    { children}
-  </header>
-)
+const Header = ({ children }) => <header className="header">{children}</header>;
 
-export default Header
+export default Header;

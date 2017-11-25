@@ -1,1 +1,1 @@
-export { default } from './TimeTracker'
+export { default } from './TimeTracker';

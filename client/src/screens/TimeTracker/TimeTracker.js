@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 import formatCounter from '../../utils/format-counter';
 
@@ -62,6 +63,10 @@ class TimeTracker extends Component {
           >
             Stop
           </button>
+        </div>
+
+        <div className="time-tracker-footer">
+          <Link to="/calendar">View Calendar</Link>
         </div>
       </div>
     );

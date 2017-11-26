@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import formatCounter from '../../utils/format-counter';
+
 import './TimeTracker.css';
 
 class TimeTracker extends Component {
@@ -34,7 +36,7 @@ class TimeTracker extends Component {
           </label>
         </div>
 
-        <div className="time-tracker-counter">{counter}</div>
+        <div className="time-tracker-counter">{formatCounter(counter)}</div>
 
         <div className="time-tracker-button">
           <button

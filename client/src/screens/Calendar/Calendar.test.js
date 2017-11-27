@@ -1,9 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { MemoryRouter } from 'react-router-dom';
 
 import Calendar from './Calendar';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
-  ReactDOM.render(<Calendar />, div);
+  ReactDOM.render(
+    <MemoryRouter>
+      <Calendar />
+    </MemoryRouter>,
+    div
+  );
 });

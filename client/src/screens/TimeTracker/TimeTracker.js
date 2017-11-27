@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import formatCounter from '../../utils/format-counter';
+import Button from '../../components/Button';
+import Counter from '../../components/Counter';
+import Input from '../../components/Input';
+import Whisper from '../../components/Whisper';
 
 import './TimeTracker.css';
 
@@ -11,6 +14,15 @@ class TimeTracker extends Component {
     start: null,
     counter: 0, // in seconds
     interval: null
+  };
+
+  componentDidMount = () => {
+    window.scrollTo(0, 0);
+  };
+
+  handleInputChange = e => {
+    const { value } = e.target;
+    this.setState(prev => ({ ...prev, name: value }));
   };
 
   startTimer = () => {
@@ -45,32 +57,30 @@ class TimeTracker extends Component {
 
     return (
       <div className="time-tracker">
-        {error ? <p>Oops, an error occured ... Please try again!</p> : null}
+        <Whisper
+          display={error}
+          type="error"
+          text="Oops, seems like something went wrong ... Please try again!"
+        />
         <div className="time-tracker-name">
-          <label className="time-tracker-name-input-wrapper">
-            <span className="time-tracker-name-input-label">
-              {'Give a name to your time tracking session:'}
-            </span>
-            <input
-              className="time-tracker-name-input"
-              type="text"
-              placeholder="Ex.: Doing important stuff"
-              value={name}
-              onChange={e => {
-                const { value } = e.target;
-                this.setState(prev => ({ ...prev, name: value }));
-              }}
-            />
-          </label>
+          <Input
+            type="text"
+            label="Give a name to your time tracking session:"
+            placeholder="Ex.: Doing important stuff"
+            value={name}
+            onChange={this.handleInputChange}
+          />
         </div>
 
-        <div className="time-tracker-counter">{formatCounter(counter)}</div>
+        <div className="time-tracker-counter">
+          <Counter value={counter} />
+        </div>
 
         <div className="time-tracker-button">
           {start === null ? (
-            <button onClick={this.startTimer}>Start</button>
+            <Button onClick={this.startTimer}>Start</Button>
           ) : (
-            <button onClick={this.stopTimer}>Stop</button>
+            <Button onClick={this.stopTimer}>Stop</Button>
           )}
         </div>
 

@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
+import CalendarView from '../../components/CalendarView';
+import Loading from '../../components/Loading';
+import Whisper from '../../components/Whisper';
+
 import './Calendar.css';
 
 class Calendar extends Component {
@@ -10,6 +14,8 @@ class Calendar extends Component {
 
   componentDidMount = async () => {
     const { store } = this.props;
+
+    window.scrollTo(0, 0);
 
     try {
       let sessions = await store.get('sessions');
@@ -23,25 +29,19 @@ class Calendar extends Component {
 
   render = () => {
     const { loading, error, sessions } = this.state;
+
     return loading ? (
-      <p>Loading...</p>
+      <Loading />
     ) : (
       <div className="calendar">
-        {error ? <p>Oops, an error occured ... Please try again!</p> : null}
-        Calendar
-        {sessions && sessions.length ? (
-          <ul>
-            {sessions.map((session, index) => (
-              <li key={`session-${index}`}>
-                <p>{session.name}</p>
-                <p>{session.start}</p>
-                <p>{session.stop}</p>
-              </li>
-            ))}
-          </ul>
-        ) : (
-          <p>No sessions registered yet, please track a session first!</p>
-        )}
+        <Whisper
+          display={error}
+          type="error"
+          text="Oops, seems like something went wrong ... Please try again!"
+        />
+
+        <CalendarView sessions={sessions} />
+
         <div className="time-tracker-footer">
           <Link to="/">Track a session</Link>
         </div>

@@ -1,1 +1,24 @@
+/* BIG CALENDAR OVERRIDE */
+.rbc-toolbar {
+  flex-wrap: wrap-reverse;
+}
+.rbc-toolbar .rbc-toolbar-label {
+  display: none;
+}
 
+.rbc-btn-group {
+  flex-grow: 1;
+  margin-bottom: 6px;
+}
+.rbc-toolbar .rbc-btn-group:first-of-type {
+  text-align: left;
+}
+.rbc-toolbar .rbc-btn-group:last-of-type {
+  text-align: right;
+}
+@media (max-width: 475px) {
+  .rbc-toolbar .rbc-btn-group {
+    /* Sorry about this one ... 😅 */
+    text-align: center !important;
+  }
+}

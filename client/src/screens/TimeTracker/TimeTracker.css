@@ -1,6 +1,8 @@
 /* NAME INPUT */
 .time-tracker .time-tracker-name {
+  margin: auto;
   margin-bottom: 24px;
+  max-width: 500px;
 }
 
 /* BUTTONS */

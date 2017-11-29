@@ -42,7 +42,7 @@ class Calendar extends Component {
 
         <CalendarView sessions={sessions} />
 
-        <div className="time-tracker-footer">
+        <div className="calendar-footer">
           <Link to="/">Track a session</Link>
         </div>
       </div>

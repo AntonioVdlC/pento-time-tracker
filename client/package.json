@@ -4,7 +4,9 @@
   "private": true,
   "dependencies": {
     "is-obj": "^1.0.1",
+    "moment": "^2.19.2",
     "react": "^16.1.1",
+    "react-big-calendar": "^0.17.0",
     "react-dom": "^16.1.1",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.17"

@@ -1,12 +1,11 @@
 .header {
   border-top: 12px solid #512da8;
   background-color: #673ab7;
-  text-align: left;
   padding: 12px;
   color: white;
 }
 
 .header .header-content {
-  max-width: 500px;
+  max-width: 1024px;
   margin: auto;
 }

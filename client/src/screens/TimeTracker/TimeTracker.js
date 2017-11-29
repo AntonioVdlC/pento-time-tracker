@@ -78,9 +78,13 @@ class TimeTracker extends Component {
 
         <div className="time-tracker-button">
           {start === null ? (
-            <Button onClick={this.startTimer}>Start</Button>
+            <Button className="time-tracker-start" onClick={this.startTimer}>
+              Start
+            </Button>
           ) : (
-            <Button onClick={this.stopTimer}>Stop</Button>
+            <Button className="time-tracker-stop" onClick={this.stopTimer}>
+              Stop
+            </Button>
           )}
         </div>
 

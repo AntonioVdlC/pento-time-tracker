@@ -1,5 +1,11 @@
 .footer {
-  background-color: #222;
+  background-color: #bdbdbd;
   padding: 12px;
   color: white;
+  font-size: 10px;
+}
+
+.footer .footer-content {
+  max-width: 500px;
+  margin: auto;
 }

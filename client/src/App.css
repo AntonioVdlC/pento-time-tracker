@@ -2,8 +2,22 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  color: #212121;
 }
 
 .app {
   text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+a {
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  color: #757575;
 }

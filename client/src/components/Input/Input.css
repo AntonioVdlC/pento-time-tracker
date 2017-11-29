@@ -1,1 +1,22 @@
+input {
+  flex-grow: 1;
+  border: 1px solid #bdbdbd;
+  padding: 12px;
+  margin-top: 6px;
+  font-size: 16px;
+}
 
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.input-label {
+  font-weight: bold;
+  margin-bottom: 6px;
+  margin-top: 6px;
+  display: inline-block;
+  white-space: pre-wrap;
+  font-size: 1.17em;
+}

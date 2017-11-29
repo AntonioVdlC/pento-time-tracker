@@ -1,1 +1,25 @@
+/* NAME INPUT */
+.time-tracker .time-tracker-name {
+  margin-bottom: 24px;
+}
 
+/* BUTTONS */
+.time-tracker .button {
+  min-width: 222px;
+  margin: 24px 0px;
+}
+.button.time-tracker-start {
+  background-color: #4caf50;
+  color: white;
+}
+.button.time-tracker-start:hover {
+  background-color: #388e3c;
+}
+
+.button.time-tracker-stop {
+  background-color: #f44336;
+  color: white;
+}
+.button.time-tracker-stop:hover {
+  background-color: #d32f2f;
+}

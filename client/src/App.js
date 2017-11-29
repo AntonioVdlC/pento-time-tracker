@@ -29,7 +29,13 @@ class App extends Component {
               render={props => <Calendar {...props} store={store} />}
             />
           </Main>
-          <Footer>Made with ♥️ by Antonio Villagra De La Cruz</Footer>
+          <Footer>
+            Made with{' '}
+            <span role="img" aria-label="love">
+              ♥️
+            </span>{' '}
+            by Antonio Villagra De La Cruz
+          </Footer>
         </div>
       </Router>
     );

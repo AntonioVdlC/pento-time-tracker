@@ -1,1 +1,13 @@
-
+.counter {
+  display: block;
+  width: 250px;
+  height: 250px;
+  line-height: 250px;
+  border: 1px solid #bdbdbd;
+  border-radius: 50%;
+  font-size: 50px;
+  color: #212121;
+  background: #fff;
+  text-align: center;
+  margin: auto;
+}

@@ -17,7 +17,7 @@ class App extends Component {
     return (
       <Router>
         <div className="app">
-          <Header>Time Tracker Pentotonic</Header>
+          <Header>Pento Time Tracker</Header>
           <Main>
             <Route
               exact

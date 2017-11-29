@@ -1,5 +1,5 @@
 .main {
-  min-height: calc(100vh - 118px);
+  min-height: calc(100vh - 100px);
   max-width: 1024px;
   margin: auto;
   padding: 12px;
